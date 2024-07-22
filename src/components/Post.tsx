@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
+import LikeSection from './LikeSection';
 // Define the structure of a Post
 interface PostData {
   profileImg: string | StaticImport;
@@ -37,6 +38,8 @@ function Post({ post }: PostProps) {
     width={300}
     height={300}
     className='object-cover w-full'/>
+
+    <LikeSection id={post.id}/>
 
   <p className='p-5 truncate'>
       <span className='font-bold mr-2'>{post.usename}</span>
