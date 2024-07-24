@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { HiOutlineDotsVertical } from 'react-icons/hi';
 import LikeSection from './LikeSection';
+import CommentSection from './CommentSection';
 // Define the structure of a Post
 interface PostData {
   profileImg: string | StaticImport;
@@ -45,6 +46,7 @@ function Post({ post }: PostProps) {
       <span className='font-bold mr-2'>{post.usename}</span>
       {post.caption}
     </p>
+    <CommentSection id={post.id}/>
     </div>
   );
 }
